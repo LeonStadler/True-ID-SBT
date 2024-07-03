@@ -1,4 +1,4 @@
-# README für True ID
+# README für True ID SBT
 Praktische Umsetzung der Masterarbeit  
 von Leon Stadler  
 im Masterstudiengang InterMedia  
