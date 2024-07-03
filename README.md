@@ -1,4 +1,4 @@
-# README für True University ID
+# README für True ID
 Praktische Umsetzung der Masterarbeit  
 von Leon Stadler  
 im Masterstudiengang InterMedia  
