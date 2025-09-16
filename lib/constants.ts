@@ -3,4 +3,4 @@ const envAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 if (!envAddress) {
     throw new Error("Missing required env NEXT_PUBLIC_CONTRACT_ADDRESS");
 }
-export const contractAddress = envAddress;
+export const contractAddress = envAddress as `0x${string}`;
