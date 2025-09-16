@@ -1,0 +1,14 @@
+# BFG Repo-Cleaner Replacements File
+# Entfernt sensible Daten aus der Git-Historie
+
+# Pinata JWT Token (aus lib/pinata.ts)
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJkZGU5ZTQxYi04MTc1LTQwODEtYjhjNy03ZWI3YTQ5NWMxYzciLCJlbWFpbCI6InVtZXJhcmlmMDFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBpbl9wb2xpY3kiOnsicmVnaW9ucyI6W3siaWQiOiJGUkExIiwiZGVzaXJlZFJlcGxpY2F0aW9uQ291bnQiOjF9XSwidmVyc2lvbiI6MX0sIm1mYV9lbmFibGVkIjpmYWxzZSwic3RhdHVzIjoiQUNUSVZFIn0sImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6IjM1NmQ4ZTFmZWU3MGMxYjRiMmZmIiwic2NvcGVkS2V5U2VjcmV0IjoiMTBkZmZhZjFkNjJkMDFiNjRlYzRhYzFiMzk5Y2ZkOWMwZGIxZWQ4Mjk3Mjk3ZTFlMTE2NDU1NGZiNGU5NzUxMSIsImlhdCI6MTcwNTUxNDE3N30.IRQ4vFz-2tmxXqIEJPUZ6bwR6TdgmlZSfUdjr9IAB34==>***REMOVED_PINATA_JWT***
+
+# WalletConnect Project ID (falls hartcodiert war)
+367d58ac2f41cff9550d95f2a87312cb==>***REMOVED_WALLETCONNECT_PROJECT_ID***
+
+# Contract Adresse (falls als Secret behandelt werden soll)
+0x08ac3828790818a58675ab67852c52ea06ab423b==>***REMOVED_CONTRACT_ADDRESS***
+
+# E-Mail aus JWT
+umearif01@gmail.com==>***REMOVED_EMAIL***

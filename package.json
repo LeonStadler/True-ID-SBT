@@ -2,6 +2,9 @@
   "name": "degree-dappv2",
   "private": true,
   "version": "0.1.0",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -31,7 +34,7 @@
     "web3": "^4.4.0"
   },
   "devDependencies": {
-    "@types/node": "^18.19.3",
+    "@types/node": "^22",
     "@types/react": "^18.2.43",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.15.0",

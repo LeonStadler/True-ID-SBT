@@ -66,3 +66,6 @@ oder [Alchemy](https://www.alchemy.com/faucets/polygon-amoy)
 Bereitgestellt mit: [Remix IDE](https://remix.ethereum.org/)
 
 Gehostet über Vercel: [Vercel](https://vercel.com/)
+
+## IPFS-Referenzen
+- Gateway-URL: https://ipfs.io/ipfs/QmWYdPCE6smSu4WqTA5f9QmdPXwmHHCPjhfLC2BFvxhk2E

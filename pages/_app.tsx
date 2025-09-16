@@ -1,29 +1,32 @@
 import { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 
-import { siteConfig } from "../config/site";
-import { fontSans } from "../lib/fonts";
-import { cn } from "../lib/utils";
 import { ThemeProvider } from "../components/theme-provider";
+import { siteConfig } from "../config/site";
 
-import "../styles/globals.css";
-import "../styles/footerstyle.css";
-import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import "@rainbow-me/rainbowkit/styles.css";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
-import Head from "next/head";
 import { polygonAmoy } from "../lib/chain";
+import "../styles/footerstyle.css";
+import "../styles/globals.css";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygonAmoy],
   [publicProvider()]
 );
 
+const WALLETCONNECT_PROJECT_ID = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
+if (!WALLETCONNECT_PROJECT_ID) {
+  throw new Error("Missing required env NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID");
+}
+
 const { connectors } = getDefaultWallets({
-  appName: "RainbowKit App",
-  projectId: "367d58ac2f41cff9550d95f2a87312cb",
+  appName: siteConfig.name,
+  projectId: WALLETCONNECT_PROJECT_ID,
   chains,
 });
 
@@ -62,7 +65,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <RainbowKitProvider chains={chains}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Head>
-              <title>TrueID SBT</title>
+              <title>{siteConfig.name}</title>
               <meta name="description" content="" />
             </Head>
 

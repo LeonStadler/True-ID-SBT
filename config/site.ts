@@ -1,7 +1,9 @@
 export type SiteConfig = typeof siteConfig
 
+const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "TrueID SBT"
+
 export const siteConfig = {
-  name: "TrueID",
+  name: APP_NAME,
   description: "SBT University Degrees",
   mainNav: [
     {
@@ -11,7 +13,7 @@ export const siteConfig = {
   ],
   links: {
     twitter: "",
-    github: "https://github.com/Le0Nin0/",
+    github: "https://github.com/LeonStadler",
     docs: "",
   },
 }

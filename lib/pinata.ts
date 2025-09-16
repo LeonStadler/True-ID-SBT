@@ -1,12 +1,7 @@
-// https://ipfs.io/ipfs/QmWYdPCE6smSu4WqTA5f9QmdPXwmHHCPjhfLC2BFvxhk2E
-// ipfs://QmWYdPCE6smSu4WqTA5f9QmdPXwmHHCPjhfLC2BFvxhk2E
-
 import axios from "axios";
 
 import { FormState } from "../types/main";
 
-const JWT =
-  "***REMOVED_PINATA_JWT***
 
 export const pinJSONToIPFS = async (formData: FormState) => {
   // Construct the pinataContent object
@@ -58,12 +53,11 @@ export const pinJSONToIPFS = async (formData: FormState) => {
 
   try {
     const res = await axios.post(
-      "https://api.pinata.cloud/pinning/pinJSONToIPFS",
+      "/api/pin",
       data,
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${JWT}`,
         },
       }
     );
