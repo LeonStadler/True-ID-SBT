@@ -46,6 +46,14 @@ Der Prototyp der Webanwendung ist unter der URL [https://true-id.vercel.app/](ht
 3. **Token erhalten**: Der Token muss zunächst vom Inhaber des Smartcontracts freigegeben werden, sollte dies länger als 3-6 Werktage dauern melden sie sich gerne beim inhaber des Repositorie
 4. **Tokens anzeigen**: Nach der Verbindung Ihrer Wallet können Sie alle ausgestellten Tokens anzeigen und verwalten.
 
+## Änderungsprotokoll
+
+Dieses Projekt entstand im Rahmen meiner Masterarbeit im Masterstudiengang InterMedia an der Fachhochschule Vorarlberg. Die ursprüngliche Funktionalität und Implementierung wurden im Sommersemester 2024 abgeschlossen und veröffentlicht.
+
+**Alle Änderungen nach der Abgabe und Veröffentlichung der Masterarbeit sind in der [CHANGES.md](./CHANGES.md) Datei dokumentiert.**
+
+Die aktuellen Änderungen dienen ausschließlich der Wartung und Kompatibilität des Projekts. Es wurden keine funktionalen Änderungen vorgenommen, die die ursprüngliche Implementierung oder das Konzept der Masterarbeit beeinträchtigen.
+
 ## Mitwirkung
 Das True University ID Projekt lädt Entwickler und Interessierte ein, zum Projekt beizutragen, sei es durch das Melden von Fehlern, Vorschlagen von Verbesserungen oder direkte Beiträge zum Code. Pull-Requests sind willkommen. Bitte stellen Sie sicher, dass Ihre Beiträge den Richtlinien des Projekts entsprechen.
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Button } from "../components/ui/button";
 import Spinner from "../components/ui/spinner";
@@ -12,11 +12,11 @@ import {
   TableRow,
 } from "../components/ui/table";
 
-import ViewMetaData from "./view-metadata";
-import { useContractRead, useContractWrite } from "wagmi";
-import { contractAddress } from "../lib/constants";
-import degreeAbi from "../lib/abi.json";
 import toast from "react-hot-toast";
+import { useContractRead, useContractWrite } from "wagmi";
+import degreeAbi from "../lib/abi.json";
+import { contractAddress } from "../lib/constants";
+import ViewMetaData from "./view-metadata";
 
 export default function NotClaimedDegreesComponent() {
   const [notClaimedDegrees, setNotClaimedDegrees] = useState<
@@ -65,7 +65,7 @@ export default function NotClaimedDegreesComponent() {
 
   useEffect(() => {
     refetchDegrees();
-  }, [isSuccess]);
+  }, [isSuccess, refetchDegrees]);
 
   const issueDegree = async (userAddress: string, tokenURI: string) => {
     try {
@@ -97,7 +97,7 @@ export default function NotClaimedDegreesComponent() {
 
   useEffect(() => {
     refetchDegrees();
-  }, [isSuccess]);
+  }, [isSuccess, refetchDegrees]);
 
   const rejectDegree = async (userAddress: string) => {
     try {

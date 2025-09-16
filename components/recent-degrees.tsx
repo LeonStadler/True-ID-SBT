@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { Button } from "../components/ui/button";
 import Spinner from "../components/ui/spinner";
 import {
   Table,
@@ -12,11 +11,11 @@ import {
   TableRow,
 } from "../components/ui/table";
 
-import ViewMetaData from "./view-metadata";
-import { useContractRead, useContractWrite } from "wagmi";
-import { contractAddress } from "../lib/constants";
-import degreeAbi from "../lib/abi.json";
 import toast from "react-hot-toast";
+import { useContractRead } from "wagmi";
+import degreeAbi from "../lib/abi.json";
+import { contractAddress } from "../lib/constants";
+import ViewMetaData from "./view-metadata";
 
 export default function RecentClaimedDegreesComponent() {
   const [notClaimedDegrees, setNotClaimedDegrees] = useState<
@@ -56,7 +55,7 @@ export default function RecentClaimedDegreesComponent() {
 
   useEffect(() => {
     refetchDegrees();
-  }, [isSuccess]);
+  }, [isSuccess, refetchDegrees]);
 
   return (
     <div>
@@ -69,9 +68,9 @@ export default function RecentClaimedDegreesComponent() {
         </div>
       ) : (
         <Table>
-         <TableCaption>
-  The following list contains the identifiers of users who have minted a TrueID University Degree Token after earning a degree.
-</TableCaption>
+          <TableCaption>
+            The following list contains the identifiers of users who have minted a TrueID University Degree Token after earning a degree.
+          </TableCaption>
 
           <TableHeader>
             <TableRow>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import {
   Dialog,
@@ -34,7 +34,7 @@ const ViewMetaData = ({ tokenURI }: any) => {
   };
 
   // Function to fetch JSON data from IPFS
-  const fetchDataFromIpfs = async () => {
+  const fetchDataFromIpfs = useCallback(async () => {
     try {
       const hash = extractHash(tokenURI);
       console.log(hash);
@@ -47,14 +47,14 @@ const ViewMetaData = ({ tokenURI }: any) => {
     } catch (error) {
       console.error("Error fetching data from IPFS:", error);
     }
-  };
+  }, [tokenURI]);
 
   // Fetch data when the modal is opened
   useEffect(() => {
     if (open) {
       fetchDataFromIpfs();
     }
-  }, [open]);
+  }, [open, fetchDataFromIpfs]);
 
   return (
     <Dialog open={open} onOpenChange={() => setOpen(!open)}>

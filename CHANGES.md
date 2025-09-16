@@ -1,5 +1,41 @@
 # CHANGES.md
 
+## 16. September 2025 - Node.js 22 Upgrade & Code Maintenance
+
+### 🔧 WARTUNG & COMPATIBILITY UPDATE
+
+Diese Änderungen dienen ausschließlich der Wartung und Kompatibilität des Projekts. Es wurden keine funktionalen Änderungen vorgenommen.
+
+### 📋 Durchgeführte Änderungen
+
+#### 1. **Node.js 22 Kompatibilität**
+- **Node.js Version**: Upgrade von 18.x auf 22.x für Vercel-Kompatibilität
+- **.nvmrc**: Aktualisiert auf Node.js 22
+- **package.json**: `engines.node` bereits auf "22.x" konfiguriert
+
+#### 2. **Dependencies Update**
+- **Radix UI Komponenten**: Aktualisiert auf neueste Versionen
+- **PostCSS & Autoprefixer**: Sicherheitsupdates
+- **Web3-Dependencies**: Bewusst auf stabile Versionen belassen (viem 1.21.4, wagmi 1.4.13, rainbowkit 1.3.7)
+
+#### 3. **Code-Qualität Verbesserungen**
+- **ESLint-Konfiguration**: `.eslintrc.json` hinzugefügt
+- **Import-Statements**: Optimiert und bereinigt
+- **useEffect Dependencies**: React Hook Warnings behoben
+- **useCallback**: Performance-Optimierung in view-metadata.tsx
+
+#### 4. **Build & Linting**
+- **Build-Prozess**: Erfolgreich getestet mit Node.js 22
+- **ESLint-Warnings**: Minimiert (nur harmlose Performance-Warnung verbleibt)
+- **TypeScript**: Vollständig kompatibel
+
+### ⚠️ Wichtige Hinweise
+- **Keine Breaking Changes**: Alle bestehenden Funktionen bleiben unverändert
+- **Web3-Stabilität**: Wagmi/v1 und viem/v1 bleiben aus Stabilitätsgründen unverändert
+- **Vercel-Ready**: Projekt ist vollständig bereit für Node.js 22 Deployment
+
+---
+
 ## 16. September 2024 - Security Hardening
 
 ### 🚨 KRITISCHE SICHERHEITSVERBESSERUNGEN
@@ -89,76 +125,6 @@ const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "TrueID SBT";
 4. **Serverseitige Secret-Verarbeitung**
 5. **Umfassende .gitignore-Regeln**
 
-### 🚀 Deployment-Hinweise
+### 🔄 Git-Historie Bereinigung
 
-#### Lokale Entwicklung:
-```bash
-# 1. .env.local erstellen
-cp .env.example .env.local
-
-# 2. Werte setzen
-# - PINATA_JWT: Dein Pinata JWT
-# - NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID: Deine WalletConnect Project ID
-# - NEXT_PUBLIC_CONTRACT_ADDRESS: Deine Contract-Adresse
-
-# 3. Server starten
-npm run dev
-```
-
-#### Production:
-- Alle Env-Variablen in Production-Environment setzen
-- `NEXT_TELEMETRY_DISABLED=1` empfohlen
-- Keine `.env.local` in Production verwenden
-
-### ⚠️ Wichtige Hinweise
-
-1. **Git-Historie**: Enthält noch die alten hartcodierten Secrets
-2. **Backup**: Vor weiteren Änderungen Repository sichern
-3. **Team**: Alle Teammitglieder über neue Env-Struktur informieren
-4. **CI/CD**: Pipeline auf neue Env-Variablen anpassen
-
-### 🔄 Nächste Schritte
-
-1. **Git-Historie bereinigen** (siehe unten)
-2. **Team informieren** über neue Env-Struktur
-3. **CI/CD Pipeline** anpassen
-4. **Production-Deployment** testen
-
----
-
-## Git-Historie Bereinigung
-
-### Option 1: BFG Repo-Cleaner (Empfohlen)
-```bash
-# 1. BFG herunterladen
-wget https://repo1.maven.org/maven2/com/madgag/bfg/1.14.0/bfg-1.14.0.jar
-
-# 2. Sensible Daten entfernen
-java -jar bfg-1.14.0.jar --replace-text replacements.txt your-repo.git
-
-# 3. Git bereinigen
-cd your-repo.git
-git reflog expire --expire=now --all && git gc --prune=now --aggressive
-```
-
-### Option 2: Git Filter-Branch
-```bash
-# Pinata JWT aus Historie entfernen
-git filter-branch --force --index-filter \
-'git rm --cached --ignore-unmatch lib/pinata.ts' \
---prune-empty --tag-name-filter cat -- --all
-```
-
-### Option 3: Neues Repository (Sicherste Option)
-```bash
-# 1. Neues Repository erstellen
-# 2. Nur bereinigte Dateien committen
-# 3. Altes Repository archivieren
-```
-
----
-
-**Datum**: 16. September 2024  
-**Autor**: Security Hardening  
-**Status**: ✅ Abgeschlossen  
-**Nächste Aktion**: Git-Historie bereinigen
+Die Git-Historie wurde mit `git filter-branch` bereinigt, um alle hartcodierten Secrets aus der Historie zu entfernen. Das Repository wurde anschließend mit `git gc --aggressive` optimiert.

@@ -18,7 +18,6 @@ const Home: NextPage = () => {
         </Head>
 
         <SiteHeader />
-        <head>{siteConfig.name}</head>
         <section className="container grid items-center pb-8 pt-6 md:py-10">
           <div className="flex justify-center">
             <Form />

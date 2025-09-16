@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useContractWrite } from "wagmi";
+import degreeAbi from "../lib/abi.json";
+import { contractAddress } from "../lib/constants";
 import { Button } from "./ui/button";
 import ViewMetaData from "./view-metadata";
-import { useContractWrite } from "wagmi";
-import { contractAddress } from "../lib/constants";
-import degreeAbi from "../lib/abi.json";
-import toast from "react-hot-toast";
 
 const SBT = ({ uri, address }: any) => {
   const [issuing, setIssuing] = useState(false);
@@ -45,6 +45,7 @@ const SBT = ({ uri, address }: any) => {
         src="https://i.seadn.io/s/raw/files/e9ce0e526f67d4fa17baca60a77204e0.png?auto=format&dpr=1&w=1000"
         width={300}
         height={300}
+        alt="SBT Token Image"
       />
 
       <div className="flex justify-around">
