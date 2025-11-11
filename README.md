@@ -7,6 +7,13 @@ Sommersemester 2024
 Studiengang: Intermedia  
 Fachhochschule Vorarlberg
 
+Projekt URL:
+https://true-id.leon-stadler.com
+
+Masterarbeit DOOI:
+https://doi.org/10.25924/opus-5484
+
+
 # Inhaltsverzeichnis
 
 1. [Überblick](#überblick)
