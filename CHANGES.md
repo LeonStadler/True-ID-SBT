@@ -1,10 +1,59 @@
 # CHANGES.md
 
+## ⚠️ WICHTIGER HINWEIS
+
+**Dieses Projekt wird ausschließlich aus Sicherheitsgründen gewartet.**
+
+Es werden **keine Änderungen** an der praktischen Umsetzung der Masterarbeit vorgenommen. Alle Updates dienen ausschließlich der Behebung von Sicherheitslücken und der Kompatibilität mit aktuellen Systemen. Die funktionale Implementierung der Masterarbeit bleibt unverändert.
+
+**Dies wird so bleiben.**
+
+---
+
+## 4. Dezember 2025 - Security Updates (Next.js & React)
+
+### 🔒 SICHERHEITSUPDATES
+
+**Nur Wartung - Keine funktionalen Änderungen**
+
+Diese Updates beheben ausschließlich bekannte Sicherheitslücken und aktualisieren die Dependencies auf die neuesten Patch-Versionen. **Es wurden keine Änderungen an der praktischen Umsetzung der Masterarbeit vorgenommen.**
+
+### 📋 Durchgeführte Änderungen
+
+#### 1. **Next.js Update**
+- **Vorher**: `^14.0.4`
+- **Nachher**: `^14.2.33` (neueste 14.x Version)
+- **Grund**: Sicherheitsupdates und Bugfixes
+
+#### 2. **React & React-DOM Update**
+- **Vorher**: `^18.2.0`
+- **Nachher**: `^18.3.1` (neueste 18.x Version)
+- **Grund**: Sicherheitsupdates und Performance-Verbesserungen
+
+#### 3. **ESLint Config Update**
+- **Vorher**: `^14.0.4`
+- **Nachher**: `^14.2.33` (synchronisiert mit Next.js)
+- **Grund**: Kompatibilität mit Next.js 14.2.33
+
+### ⚠️ Wichtige Hinweise
+
+- **Keine Breaking Changes**: Alle Updates sind Patch-Versionen innerhalb der gleichen Major-Version
+- **CVE-2025-55182 & CVE-2025-66478**: Diese Lücken betreffen nur React 19 und Next.js 15-16, nicht die verwendeten Versionen
+- **Verbleibende Vulnerabilities**: wagmi/viem/rainbowkit haben noch bekannte Lücken, erfordern aber Major-Updates (siehe separate Migration)
+
+### 📁 Betroffene Dateien
+
+- `package.json` - Dependency-Versionen aktualisiert
+
+---
+
 ## 16. September 2025 - Node.js 22 Upgrade & Code Maintenance
 
 ### 🔧 WARTUNG & COMPATIBILITY UPDATE
 
-Diese Änderungen dienen ausschließlich der Wartung und Kompatibilität des Projekts. Es wurden keine funktionalen Änderungen vorgenommen.
+**Nur Wartung - Keine funktionalen Änderungen**
+
+Diese Änderungen dienen ausschließlich der Wartung und Kompatibilität des Projekts. Es wurden **keine Änderungen an der praktischen Umsetzung der Masterarbeit** vorgenommen.
 
 ### 📋 Durchgeführte Änderungen
 
@@ -40,7 +89,9 @@ Diese Änderungen dienen ausschließlich der Wartung und Kompatibilität des Pro
 
 ### 🚨 KRITISCHE SICHERHEITSVERBESSERUNGEN
 
-Diese Änderungen stellen sicher, dass keine sensiblen Daten mehr im Repository oder in der Git-Historie gespeichert sind.
+**Nur Wartung - Keine funktionalen Änderungen**
+
+Diese Änderungen stellen sicher, dass keine sensiblen Daten mehr im Repository oder in der Git-Historie gespeichert sind. **Es wurden keine Änderungen an der praktischen Umsetzung der Masterarbeit vorgenommen.**
 
 ### 📋 Durchgeführte Änderungen
 
